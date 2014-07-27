@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>CODEBOOK.md</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>CODEBOOK.md</h1>
+
+<p>The codebook describes the varabiles used from:</p>
+
+<ul>
+<li>the output data in the tidy_data.txt</li>
+<li>the raw data <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">Human Activity Recognition Using Smartphone - UCI</a></li>
+</ul>
+
+<p><strong>tidy_data.txt</strong></p>
+
+<p>Subject - subject id from the study
+Activity - activity recorded from raw data (Source: activity_labels.txt file)</p>
+
+<ul>
+<li>1 - walking</li>
+<li>2 - walking upstairs</li>
+<li>3 - walking downstairs</li>
+<li>4 - sitting</li>
+<li>5 - standing</li>
+<li>6 - laying</li>
+</ul>
+
+<p><strong>Terms:</strong>
+(See feature_info.txt from source data files for full study descriptions.)</p>
+
+<ul>
+<li>TimeOfBodyAcceleration = body data from accelerometer</li>
+<li>TimeOfBodyGyroscope = body data from gyroscope</li>
+<li>TimeOfGravityAcceleration = gravity data from accelerometer </li>
+<li>TimeOfGravityGyroscope = gravity data from gyroscope </li>
+</ul>
+
+<p>Jerk = Body linear acceleration and angular velocity were derived in time to obtain Jerk signals (TimeOfBodyAccelerationJerkMean and TimeBodyGyroscopeJerkMean). </p>
+
+<p>Magnitude = Magnitude of these three-dimensional signals were calculated using the Euclidean norm for </p>
+
+<ul>
+<li>TimeofBodyAccerlation</li>
+<li>TimeofGravityAccelleration</li>
+<li>TimeofBodyAccellerationJerk</li>
+<li>TimeofBodyGyroscope</li>
+<li>TimeofBodyGyroscopeJerk </li>
+</ul>
+
+<p>Frequency = Fast Fourier Transform (FFT) was applied to these signals producing:</p>
+
+<ul>
+<li>FrequencyOfBodyAcceleration</li>
+<li>FrequencyOfBodyAccelerationJerk-XYZ</li>
+<li>FrequencyOfBodyGyroscope-XYZ</li>
+<li>FrequencyOfBodyAccelerationJerkMagnitude</li>
+<li>FrequencyOfBodyGyroscopeMagnitude</li>
+<li><p>FrequencyOfBodyGyroscopeJerkMagitude. </p></li>
+<li><p>-X = 3-axial signal in X direction</p></li>
+<li><p>-Y = 3-axial signal in Y direction</p></li>
+<li><p>-Z = 3-axial signal in Z direction</p></li>
+<li><p>mean = mean value</p></li>
+<li><p>std = standard deviation</p></li>
+</ul>
+
+<p><strong>List of Activity Data Variables</strong></p>
+
+<ul>
+<li>TimeOfBodyAccelerationMean-X</li>
+<li>TimeOfBodyAccelerationMean-Y</li>
+<li>TimeOfBodyAccelerationMean-Z</li>
+<li>TimeOfBodyAccelerationSTD-X</li>
+<li>TimeOfBodyAccelerationSTD-Y</li>
+<li>TimeOfBodyAccelerationSTD-Z</li>
+<li>TimeOfGravityAccelerationSTD-X</li>
+<li>TimeOfGravityAccelerationSTD-Y</li>
+<li>TimeOfGravityAccelerationSTD-Z</li>
+<li>TimeOfBodyAccelerationJerkMean-X</li>
+<li>TimeOfBodyAccelerationJerkMean-Y</li>
+<li>* TimeOfBodyAccelerationJerkMean-Z</li>
+<li>TimeOfBodyAccelerationJerkSTD-X</li>
+<li>TimeOfBodyAccelerationJerkSTD-Y</li>
+<li>TimeOfBodyAccelerationJerkSTD-Z</li>
+<li>TimeOfBodyGyroscopeMean-X</li>
+<li>TimeOfBodyGyroscopeMean-Y</li>
+<li>TimeOfBodyGyroscopeMean-Z</li>
+<li>TimeOfBodyGyroscopeSTD-X</li>
+<li>TimeOfBodyGyroscopeSTD-Y</li>
+<li>TimeOfBodyGyroscopeSTD-Z</li>
+<li>TimeOfBodyGyroscopeJerkMean-X</li>
+<li>TimeOfBodyGyroscopeJerkMean-Y</li>
+<li>TimeOfBodyGyroscopeJerkMean-Z</li>
+<li>TimeOfBodyAccelerationMagnitudeMean</li>
+<li>TimeOfBodyAccelerationMagnitudeSTD</li>
+<li>TimeOfGravityAccelerationMagnitudeMean</li>
+<li>TimeOfGravityAccelerationMagnitudeSTD</li>
+<li>TimeOfBodyAccelerationJerkMagnitudeMean</li>
+<li>TimeOfBodyAccelerationJerkMagnitudeSTD</li>
+<li>FrequencyOfBodyAccelerationMean-X</li>
+<li>FrequencyOfBodyAccelerationMean-Y</li>
+<li>FrequencyOfBodyAccelerationMean-Z</li>
+<li>FrequencyOfBodyAccelerationSTD-X</li>
+<li>FrequencyOfBodyAccelerationSTD-Y</li>
+<li>FrequencyOfBodyAccelerationSTD-Z</li>
+<li>FrequencyOfBodyAccelerationJerkMean-X</li>
+<li>FrequencyOfBodyAccelerationJerkMean-Y</li>
+<li>FrequencyOfBodyAccelerationJerkMean-Z</li>
+<li>FrequencyOfBodyAccelerationJerkSTD-X</li>
+<li>FrequencyOfBodyAccelerationJerkSTD-Y</li>
+<li>FrequencyOfBodyAccelerationJerkSTD-Z</li>
+<li>FrequencyOfBodyGyroscopeMean-X</li>
+<li>FrequencyOfBodyGyroscopeMean-Y</li>
+<li>FrequencyOfBodyGyroscopeMean-Z</li>
+<li>FrequencyOfBodyGyroscopeSTD-X</li>
+<li>FrequencyOfBodyGyroscopeSTD-Y</li>
+<li>FrequencyOfBodyGyroscopeSTD-Z</li>
+<li>FrequencyOfBodyAccelerationMagnitudeMean</li>
+<li>FrequencyOfBodyAccelerationMagnitudeSTD</li>
+<li>FrequencyOfBodyBodyAccelerationJerkMagnitudeMean</li>
+<li>FrequencyOfBodyBodyAccelerationJerkMagnitudeSTD</li>
+<li>FrequencyOfBodyBodyGyroscopeMagnitudeMean</li>
+<li>FrequencyOfBodyBodyGyroscopeMagnitudeSTD</li>
+<li>FrequencyOfBodyBodyGyroscopeJerkMagnitudeMean</li>
+<li>FrequencyOfBodyBodyGyroscopeJerkMagnitudeSTD</li>
+<li>AngleOfTimeOfFrequencyOfBodyAccelerationJerkMeanGravityMean</li>
+<li>AngleOfTimeOfFrequencyOfBodyGyroscopeMeanGravityMean</li>
+<li>AngleOfTimeOfFrequencyOfBodyGyroscopeJerkMeanGravityMean</li>
+<li>AngleOfXGravityMean</li>
+<li>AngleOfYGravityMean</li>
+<li>AngleOfZGravityMean</li>
+</ul>
+
+</body>
+
+</html>
+
